@@ -31,16 +31,11 @@
     <div class="container">
       <form class="form-signin" >
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" id="inputUser" name="userName" class="form-control" placeholder="User Name" required autofocus>
+        <input type="text" id="inputUser"  class="form-control" placeholder="User Name" required autofocus>
         <label for="inputPass" class="sr-only">Password</label>
-        <input type="password" id="inputPass" class="form-control" name="password" placeholder="Password" required>
-        <p  id="alerg" class="success"></p>
-		<div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-		  </div>
-        <button name="submit" onclick="checking()" class="btn btn-lg btn-primary btn-block">Sign in</button>
+        <input type="password" id="inputPass" class="form-control" placeholder="Password" required>
+        <p  id="alerg" class="succes" style="color:red; font-size:18px;"></p>
+        <button name="submit" onclick="checking()" type="button" class="btn btn-lg btn-primary btn-block">Sign in</button>
       </form>
 
     </div> <!-- /container -->

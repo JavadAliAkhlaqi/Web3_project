@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+if(isset($_SESSION["go"])){
+	
 include_once("../import_component/header.php");
 
 include_once("../import_component/left_menu.php");
@@ -89,6 +90,9 @@ echo "<h2 align='center'>this is a test</h2>";
 
 }
 include_once("../import_component/footer.php");
+}else{
+	header("Location:http://localhost/Web3_project/login/");
+}
 
 
 

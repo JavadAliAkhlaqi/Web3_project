@@ -108,7 +108,14 @@ xmlhttp.onreadystatechange=function(){
 
 if(xmlhttp.status==200 && xmlhttp.readyState==4){
 
-alert(xmlhttp.responseText);
+if(xmlhttp.responseText=="found"){
+	window.location.assign("http://localhost/Web3_project/first_layer/index.php");
+}else{if(xmlhttp.responseText=="not found"){
+	document.getElementById('alerg').innerHTML="Please check your username or password!";
+}else{
+	document.getElementById("alerg").innerHTML="Please fill all of the fields!";
+}
+ }
 
 }
 }

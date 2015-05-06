@@ -79,7 +79,7 @@
 				<!-- user dropdown starts -->
 				<div class="btn-group pull-right">
 					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="icon-user"></i><span class="hidden-phone" id="user"><?php echo $_POST["userName"]?></span>
+						<i class="icon-user"></i><span class="hidden-phone" id="user"><?php echo $_SESSION["go"]?></span>
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
