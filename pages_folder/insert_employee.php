@@ -21,7 +21,7 @@ if(isset($_POST["submit"])){
 	$newdir=$fdir.$_FILES["img"]["name"];
 	move_uploaded_file($tmp,$newdir);
 	if(mysql_query("insert into employee values('','$name','$gender','$bDate','$inDate','$exp',$salary,$type,'$img','$ssn','$fname','$lname')")){
-header("Location:http://localhost/w3_project/first_layer/index.php?title=employee");
+header("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=employee");
 
 }
 

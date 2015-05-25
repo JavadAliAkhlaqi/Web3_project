@@ -1,5 +1,5 @@
 <?php
 $con=mysql_connect("localhost","root","");
-mysql_select_db("mydb",$con);
+mysql_select_db("school",$con);
 
 ?>

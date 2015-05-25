@@ -8,9 +8,9 @@ include_once("../db_connection/connection.php");
 ?>
 <div id="content" class="span12">
 			<!-- content starts --><div><ul class="breadcrumb"><li>
-						<a href="http://localhost/w3_project/first_layer/index.php">Home</a> <span class="divider">/</span>
+						<a href="http://localhost/Web3_project/indexPage_folder/index.php">Home</a> <span class="divider">/</span>
 					</li><li>
-						<a href="http://localhost/w3_project/first_layer/index.php?title=employee"><?php echo $from;?></a> <span class="divider">/</span>
+						<a href="http://localhost/Web3_project/indexPage_folder/index.php?title=employee"><?php echo $from;?></a> <span class="divider">/</span>
 					</li><li>
 						<a href="#"><?php echo $title ?></a></li></ul>
 			</div><div class="row-fluid sortable ui-sortable"><div class="box span12">

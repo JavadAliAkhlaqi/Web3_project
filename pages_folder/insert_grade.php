@@ -11,10 +11,10 @@ include_once("../db_connection/connection.php");
 			<div>
 				<ul class="breadcrumb">
 					<li>
-						<a href="http://localhost/w3_project/first_layer/index.php">Home</a> <span class="divider">/</span>
+						<a href="http://localhost/Web3_project/indexPage_folder/index.php">Home</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a href="http://localhost/w3_project/first_layer/index.php?title=<?php echo $from ?>"><?php echo $from ?></a> <span class="divider">/</span>
+						<a href="http://localhost/Web3_project/indexPage_folder/index.php?title=<?php echo $from ?>"><?php echo $from ?></a> <span class="divider">/</span>
 					</li>
 					<li>
 						<a href="#"><?php echo $title; ?></a>

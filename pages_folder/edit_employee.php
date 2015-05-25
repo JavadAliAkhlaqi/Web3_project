@@ -22,7 +22,7 @@ $img1=$_FILES["img"]["name"];
 $name1=$_POST["name"];
 if(mysql_query("update employee set employeeName='$name1',gender='$gender1',date_In='$startDate1',date_Out='$endDate1',experience
 	='$exp1',salary='$salary1',tape=$type1,image='$img1',ssn='$ssn1',lname='$lname1' where idEmployee='$id'")){
-	header(("Location:http://localhost/w3_project/first_layer/index.php?title=employee"));
+	header(("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=employee"));
 }else{
 	echo "try again later";
 }

@@ -3,7 +3,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Free HTML5 Bootstrap Admin Template</title>
+	<title><?php if(isset($_GET["title"])){ echo $_GET["title"]."  page";}else{
+		echo "dashboard page";
+	} ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
@@ -54,7 +56,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"> <img alt="Charisma Logo" src="../img/logo20.png"> <span>Charisma</span></a>
+				<a class="brand" href="../indexPage_folder/index.php"> <img alt="Charisma Logo" src="../img/logo20.png"> <span>School project</span></a>
 				
 				<!-- theme selector starts -->
 				<div class="btn-group pull-right theme-container">
@@ -85,7 +87,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="#">Profile</a></li>
 						<li class="divider"></li>
-						<li><a href="../login/index.php">Logout</a></li>
+						<li><a href="../loginPage/index.php">Logout</a></li>
 					</ul>
 				</div>
 				<!-- user dropdown ends -->

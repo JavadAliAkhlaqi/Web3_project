@@ -11,7 +11,7 @@ include_once("../db_connection/connection.php");
 			<div>
 				<ul class="breadcrumb">
 					<li>
-						<a href="http://localhost/w3_project/first_layer/index.php">Home</a> <span class="divider">/</span>
+						<a href="http://localhost/Web3_project/indexPage_folder/index.php">Home</a> <span class="divider">/</span>
 					</li>
 					<li>
 						<a href="#"><?php echo $title ?></a>
@@ -76,7 +76,7 @@ include_once("../db_connection/connection.php");
 										<i class="icon-edit icon-white"></i>  
 										Edit                                            
 									</a>
-									<a class="btn btn-danger" href="../import_component/delete.php?title=delete&from=Student Home&id='.$row['idStudent'].'">
+									<a class="btn btn-danger" href="../pages_folder/delete_student.php?title=delete&from=Student Home&id='.$row['idStudent'].'">
 										<i class="icon-trash icon-white"></i> 
 										Delete
 									</a>

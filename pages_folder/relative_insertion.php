@@ -5,16 +5,31 @@ $second=$_GET["second"];
 $from=$_GET["from"];
 $id=$_GET["ids"];
 include_once("../db_connection/connection.php");
+if(isset($_POST["name"])){
+	$name=$_POST["name"];
+	$fname=$_POST["fname"];
+	$ssn=$_POST["ssn"];
+	$img=$_FILES["img"]["name"];
+	$bDate=$_POST["bdate"];
+	$inDate=$_POST["indate"];
+	$grade=$_POST["grade"];
+	$tmp=$_FILES["img"]["tmp_name"];
+	$tmp="../upload/";
+	if(mysql_query("insert into student values('','$name','$fname','$bDate','$img','$ssn','$grade','$inDate')")){
+header("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=student");
+
+}
+}
 ?>
 <div id="content" class="span10">
 			<!-- content starts -->
 			<div>
 				<ul class="breadcrumb">
 					<li>
-						<a href="#">Home</a> <span class="divider">/</span>
+						<a href="http://localhost/Web3_project/indexPage_folder/index.php">Home</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a href="index.php?title=<?php echo $from?>"><?php echo $from ?></a> <span class="divider">/</span>
+						<a href="http://localhost/Web3_project/indexPage_folder/index.php?title=<?php echo $from ?>"><?php echo $from ?></a> <span class="divider">/</span>
 					</li>
 					<li>
 						<a href="#"><?php echo $title; ?></a>
@@ -35,33 +50,21 @@ include_once("../db_connection/connection.php");
 						<form class="form-horizontal">
 						  <fieldset>
 							<div class="control-group">
-							  <label class="control-label" for="typeahead"> From: </label>
+							  <label class="control-label" for="typeahead"> Relative Name: </label>
 							  <div class="controls">
 								<input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
 
 							  </div>
 							</div>
 							<div class="control-group">
-							  <label class="control-label" for="typeahead">To: </label>
+							  <label class="control-label" for="typeahead">Relative Father Name: </label>
 							  <div class="controls">
 								<input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
 
 							  </div>
 							</div>
 							<div class="control-group">
-							  <label class="control-label" for="typeahead">Pocket Number: </label>
-							  <div class="controls">
-								<input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
-							  </div>
-							</div>
-							<div class="control-group">
-							  <label class="control-label" for="typeahead">Type: </label>
-							  <div class="controls">
-								<input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
-							  </div>
-							</div>
-							<div class="control-group">
-							  <label class="control-label" for="typeahead">Date: </label>
+							  <label class="control-label" for="typeahead">Relative Relation: </label>
 							  <div class="controls">
 								<input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
 							  </div>
