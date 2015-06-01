@@ -14,8 +14,12 @@ $cr->setPassword("");
 $cr->setDatabase("school");
 $table ="student";
 $col="idStudent,name,fatherName,birthDate,image,ssn,id_gr,startDate";
-$value="null,'".$name."','".$fname."','".$brDate."','".$file."','".$ssn."',".$grade.",'".$inDate"'";
+$value="null,'".$name."','".$fname."','".$brDate."','".$file."','".$ssn."',".$grade.",'".$inDate."'";
 if($cr->insert($table,$col,$value)==1){
-	header("Location:index.php?title=student");
+	
+	header("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=student");
+}else{
+	echo "sorry try again later";
 }
+
 ?>

@@ -44,7 +44,7 @@ include_once("../pages_folder/view_student.php");
 
 }elseif($title=="properties_student"){
 
-	include_once '../pages_folder/properties_student.php';
+	include_once '../pages_folder/detail_student.php';
 
 }elseif($title=="insert_employee"){
 
@@ -85,8 +85,9 @@ include_once("../pages_folder/view_student.php");
 }
 
 }else{
-
-echo "<h2 align='center'>this is a test</h2>";
+$name="جوادعلی اخلاقی";
+echo $name;
+echo "<h2 align='center'>حواد علی اخلاقی</h2>";
 
 }
 include_once("../pages_folder/footer.php");

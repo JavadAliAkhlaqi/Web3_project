@@ -2,22 +2,6 @@
 $title=$_GET["title"];
 $name=$_GET["table"];
 $second=$_GET["second"];
-include_once("../db_connection/connection.php");
-if(isset($_POST["name"])){
-	$name=$_POST["name"];
-	$fname=$_POST["fname"];
-	$ssn=$_POST["ssn"];
-	$img=$_FILES["img"]["name"];
-	$bDate=$_POST["bdate"];
-	$inDate=$_POST["indate"];
-	$grade=$_POST["grade"];
-	$tmp=$_FILES["img"]["tmp_name"];
-	$tmp="../upload/";
-	if(mysql_query("insert into student values('','$name','$fname','$bDate','$img','$ssn','$grade','$inDate')")){
-header("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=student");
-
-}
-}
 ?>
 <div id="content" class="span10">
 			<!-- content starts -->
@@ -42,7 +26,7 @@ header("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=
 						</div>
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal" method="post" enctype="multipart/form-data" action="#">
+						<form class="form-horizontal" method="get" enctype="multipart/form-data" action="../pages_folder/insert_student.php">
 						  <fieldset>
 							<div class="control-group">
 							  <label class="control-label"  for="typeahead1">Name: </label>
@@ -55,6 +39,26 @@ header("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=
 							  <label class="control-label" for="typeahead2">Father Name: </label>
 							  <div class="controls">
 								<input type="text" onblur="showStName()" name="fname"   class="span6 typeahead" id="typeahead2" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
+
+							  </div>
+							</div>
+								<div class="control-group">
+							  <label class="control-label" for="typeahead2">Last Name: </label>
+							  <div class="controls">
+								<input type="text" onblur="showStName()" name="lname"   class="span6 typeahead" id="typeahead2" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
+
+							  </div>
+							</div>
+								<div class="control-group">
+							  <label class="control-label" for="typeahead2">Grand Father Name: </label>
+							  <div class="controls">
+								<input type="text" onblur="showStName()" name="gfname"   class="span6 typeahead" id="typeahead2" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
+							  </div>
+							</div>
+								<div class="control-group">
+							  <label class="control-label" for="typeahead2">Nationality: </label>
+							  <div class="controls">
+								<input type="text" onblur="showStName()" name="national"   class="span6 typeahead" id="typeahead2" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
 
 							  </div>
 							</div>
@@ -76,7 +80,7 @@ header("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=
 							<div class="control-group">
 							  <label class="control-label" for="typeahead4">Birth Date: </label>
 							  <div class="controls">
-								<input type="Date" value="y/m/d" name="bdate" class="span6 typeahead4" id="typeahead4" data-provide="typeahead" data-items="4">
+								<input type="date" value="y/m/d" name="bdate" class="span6 typeahead4" id="typeahead4" data-provide="typeahead" data-items="4">
 								  </div>
 							</div>
 

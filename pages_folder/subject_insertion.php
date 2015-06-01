@@ -3,7 +3,7 @@ $title=$_GET["title"];
 $name=$_GET["table"];
 $second=$_GET["second"];
 $from=$_GET["from"];
-$id=$_GET["ids"];
+$id=$_GET["id"];
 include_once("../db_connection/connection.php");
 ?>
 <div id="content" class="span10">
@@ -32,35 +32,28 @@ include_once("../db_connection/connection.php");
 						</div>
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal">
+						<form class="form-horizontal" method="get" action="../pages_folder/insert_subject.php">
 						  <fieldset>
 							<div class="control-group">
 							  <label class="control-label" for="typeahead"> Subject Name: </label>
 							  <div class="controls">
-								<input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
+								<input type="text" name="sname" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
 
 							  </div>
 							</div>
 							<div class="control-group">
 							  <label class="control-label" for="typeahead">Number of Pages: </label>
 							  <div class="controls">
-								<input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
-
-							  </div>
-							</div>
-							<div class="control-group">
-							  <label class="control-label" for="typeahead">Class: </label>
-							  <div class="controls">
-								<input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
+								<input type="text" name="spage" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
 							  </div>
 							</div>
 							<div class="control-group">
 							  <div class="controls">
-								<input type="text" class="span6 typeahead" value="<?php echo $id ?>" id="typeahead11" style="display:none;" data-provide="typeahead" data-items="4">
+								<input type="text"  name="clid" class="span6 typeahead" value="<?php echo $id ?>" id="typeahead11" style="display:none;" data-provide="typeahead" data-items="4">
 							  </div>
 							</div>
 							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Save changes</button>
+							  <button type="submit" name="submit" class="btn btn-primary">Save changes</button>
 							  <button type="reset" class="btn">Cancel</button>
 							</div>
 						  </fieldset>

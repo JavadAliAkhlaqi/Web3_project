@@ -100,7 +100,7 @@ header("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=
 							<div class="control-group">
 								<label class="control-label" for="selectError3">Type of Work:</label>
 								<div class="controls">
-								  <select name="tape" id="selectError3">
+								  <select onClick="showClassName('*','job','')" id="selectError3">
 								  </select>
 								</div>
 							  </div>

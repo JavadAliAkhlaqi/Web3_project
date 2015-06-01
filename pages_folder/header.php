@@ -1,5 +1,4 @@
-<?php 
-?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -8,7 +7,7 @@
 	} ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
-	<meta name="author" content="Muhammad Usman">
+	<meta name="author" content="text/html; ">
 
 	<!-- The styles -->
 	<link id="bs-css" href="../css/bootstrap-cerulean.css" rel="stylesheet">

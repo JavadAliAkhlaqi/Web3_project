@@ -1,13 +1,14 @@
 <?php
-include_once("../db_connection/connection.php");
-
-			$title=$_GET["title"];
-
+	$title=$_GET["title"];
+	include_once("../crude_folder/crude.php");
+	$crd=new Crude();
+	$cols="*";
+	$table="student";
+	$condition="";
+	$result=$crd->select($cols,$table,$condition);
 ?>
 <div id="content" class="span12">
 			<!-- content starts -->
-			
-
 			<div>
 				<ul class="breadcrumb">
 					<li>
@@ -28,26 +29,21 @@ include_once("../db_connection/connection.php");
 							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
 							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
 						</div>
-					</div>
-				
-					
+					</div>		
 			<div class="box-content">
-
 						<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">
-
 							<table class="table table-striped table-bordered bootstrap-datatable datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
-								<label class="control-label" style="display:inline"for="selectError3">Select Class</label>
 								<div class="controls" style="display:inline">
-								  <select id="selectError3">
+								  <select id="selectError2">
 									<option>Option 1</option>
 									<option>Option 2</option>
 									<option>Option 3</option>
 									<option>Option 4</option>
 									<option>Option 5</option>
 								  </select>
+								  <label class="control-label" style="display:inline"for="selectError3">Select Class</label>
 								</div>
 						  <thead>
-
 							  <tr role="row"><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 221px; " aria-sort="ascending" aria-label="Username: activate to sort column descending">Name</th>
 							  	<th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 192px; " aria-label="Date registered: activate to sort column ascending">Birthd Date</th>
 							  	<th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 100px; " aria-label="Role: activate to sort column ascending">ID</th>
@@ -56,10 +52,8 @@ include_once("../db_connection/connection.php");
                                 <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 413px; " aria-label="Actions: activate to sort column ascending">Add Properties</th>
 							  </tr>
 						  </thead>   
-			 
 					  <tbody role="alert" aria-live="polite" aria-relevant="all">
 					  								  	<?php 
-			
 			$result=mysql_query("select * from student");
 			while($row=mysql_fetch_assoc($result)){
 				echo ' <tr class="odd">

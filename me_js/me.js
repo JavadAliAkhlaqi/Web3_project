@@ -6,8 +6,8 @@ xmlhttp =new XMLHttpRequest();
 	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 
 }
-function showClName(){
-	xmlhttp.open("GET","../pages_folder/showName.php");
+function showClassName(cols,table,condition){
+	xmlhttp.open("GET","../pages_folder/showName.php?table="+table+"&cols="+cols+"&condition="+condition);
 	xmlhttp.send(null);
 	xmlhttp.onreadystatechange=function(){
 		if(xmlhttp.status==200 && xmlhttp.readyState==4){

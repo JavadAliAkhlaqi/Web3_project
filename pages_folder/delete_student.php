@@ -1,12 +1,14 @@
 <?php
-include_once("../db_connection/connection.php");
+//used for importing class
+include_once("../crude_folder/crude.php");
 $id=$_GET["id"];
-$query="delete from student where idstudent=$id";
-if(mysql_query($query)){
+$crd=new Crude();
+$table="student";
+$condition="where idStudent='".$id."'";
+if($crd->delete($table,$condition)==1){
 header("Location:http://localhost/Web3_project/indexPage_folder/index.php?title=student");
 }else{
-echo $query;
-
+echo "sorry try again later";
 }
 
 ?>

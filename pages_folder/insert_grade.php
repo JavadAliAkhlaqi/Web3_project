@@ -1,10 +1,8 @@
 <?php
 $title=$_GET["title"];
 $name=$_GET["table"];
-$second=$_GET["second"];
 $from=$_GET["from"];
-$id=$_GET["ids"];
-include_once("../db_connection/connection.php");
+
 ?>
 <div id="content" class="span10">
 			<!-- content starts -->
@@ -32,17 +30,24 @@ include_once("../db_connection/connection.php");
 						</div>
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal">
+						<form class="form-horizontal" method="post" action="../pages_folder/insert2_grade.php">
 						  <fieldset>
 							<div class="control-group">
 							  <label class="control-label" for="typeahead"> Class Name: </label>
 							  <div class="controls">
-								<input type="text" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
+								<input type="text" name="clName" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
+
+							  </div>
+							</div>
+							<div class="control-group">
+							  <label class="control-label" for="typeahead"> Number of Subject: </label>
+							  <div class="controls">
+								<input type="text" name="subAmount" class="span6 typeahead" id="typeahead" data-provide="typeahead" data-items="4">
 
 							  </div>
 							</div>
 							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Save changes</button>
+							  <button type="submit" name="submit" class="btn btn-primary">Save changes</button>
 							  <button type="reset" class="btn">Cancel</button>
 							</div>
 						  </fieldset>
@@ -55,3 +60,4 @@ include_once("../db_connection/connection.php");
 			</div>
 			</div>
 		</div>
+		
